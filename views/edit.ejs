@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Edit Employee - <%= employee.name %></title>
+</head>
+<body>
+    <header>
+        <div class="logo">EMPLOYEE PAYROLL</div>
+    </header>
+
+    <div class="form-container">
+        <h2>Update Employee Details</h2>
+        <hr>
+        <form action="/edit/<%= employee.id %>" method="POST">
+            
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" value="<%= employee.name %>" required>
+            </div>
+
+            <div class="form-group">
+                <label>Department</label>
+                <div class="checkbox-group">
+                    <% const depts = ['HR', 'Sales', 'Finance', 'Engineer', 'Others']; %>
+                    <% depts.forEach(dept => { %>
+                        <input type="radio" name="department" value="<%= dept %>" 
+                               <%= employee.department === dept ? 'checked' : '' %>> <%= dept %>
+                    <% }) %>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="salary">Basic Salary (₹)</label>
+                <input type="number" id="salary" name="salary" value="<%= employee.salary %>" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label>Notes</label>
+                <textarea name="notes" rows="4" style="width: 100%; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+            </div>
+
+            <div class="btn-group">
+                <a href="/" class="cancel-btn">Cancel</a>
+                <button type="submit" class="submit-btn">Update Employee</button>
+                <button type="reset" class="reset-btn">Reset Changes</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

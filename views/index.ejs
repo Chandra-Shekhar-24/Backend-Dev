@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <title>Employee Payroll</title>
+</head>
+<body>
+    <header>
+        <div class="logo">EMPLOYEE PAYROLL</div>
+    </header>
+    <main>
+        <div class="header-row">
+            <h2>Employee Details</h2>
+            <a href="/add" class="add-btn">+ Add User</a>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>DEPARTMENT</th>
+                    <th>BASIC SALARY</th>
+                    <th>TAX (12%)</th>
+                    <th>NET SALARY</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% employees.forEach(emp => { 
+                    let tax = emp.salary * 0.12;
+                    let net = emp.salary - tax;
+                %>
+                <tr>
+                    <td><%= emp.name %></td>
+                    <td><span class="dept-tag"><%= emp.department %></span></td>
+                    <td>₹ <%= emp.salary.toLocaleString() %></td>
+                    <td>₹ <%= tax.toLocaleString() %></td>
+                    <td>₹ <%= net.toLocaleString() %></td>
+                    <td>
+                        <a href="/delete/<%= emp.id %>">🗑️</a>
+                        <a href="/edit/<%= emp.id %>">✏️</a>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

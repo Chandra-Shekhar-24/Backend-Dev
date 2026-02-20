@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1771571336743",
+    "name": "Chandra Shekhar Bansal",
+    "gender": "Male",
+    "department": "Engineer",
+    "salary": 40000,
+    "profilePic": "img1",
+    "notes": "Nothing"
+  },
+  {
+    "id": "1771571364094",
+    "name": "Lekhraj Pandey",
+    "gender": "Male",
+    "department": "HR",
+    "salary": 30000,
+    "profilePic": "img3",
+    "notes": "gkyuj"
+  }
+]

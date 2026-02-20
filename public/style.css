@@ -1,0 +1,307 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+}
+
+header {
+    background: white;
+    padding: 20px 100px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #82A720;
+    font-weight: bold;
+}
+
+main {
+    padding: 40px 100px;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-btn {
+    background: #82A720;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background: #42515F;
+    color: white;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.dept-tag {
+    background: #E9F5DB;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+}
+
+.form-container {
+    background: white;
+    width: 50%;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #42515F;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+button,
+.cancel-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.submit-btn {
+    background: #E0E0E0;
+}
+
+.reset-btn {
+    background: #E0E0E0;
+}
+
+.cancel-btn {
+    background: #E0E0E0;
+    color: black;
+}
+
+/* General Reset & Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    color: #42515f;
+}
+
+/* --- Global Header --- */
+header {
+    background: #ffffff;
+    padding: 15px 10%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo-content {
+    display: flex;
+    align-items: center;
+    color: #82a720; /* The signature green from the logo */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* --- Main Content Wrapper --- */
+.main-content {
+    padding: 30px 10%;
+}
+
+/* --- DASHBOARD TABLE STYLING --- */
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.add-btn {
+    background-color: #82a720;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+thead {
+    background-color: #42515f;
+    color: #ffffff;
+    text-align: left;
+}
+
+th, td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.dept-tag {
+    background-color: #e9f5db;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+/* --- EMPLOYEE FORM STYLING --- */
+.form-container {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 40px 60px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.form-title {
+    font-size: 24px;
+    color: #42515f;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    width: 160px;
+    font-weight: 500;
+    color: #42515f;
+}
+
+/* Form Inputs & Selects */
+input[type="text"], 
+select, 
+textarea {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+    border-color: #82a720;
+}
+
+/* Profile Image Selection */
+.profile-radio-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-radio-group input[type="radio"] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.profile-radio-group img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+/* Horizontal Radio & Checkbox Groups */
+.option-group {
+    display: flex;
+    gap: 20px;
+}
+
+.option-group input {
+    margin-right: 8px;
+}
+
+/* Date Selector Grid */
+.date-row {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+}
+
+/* --- BUTTON ROW (Matches reference images) --- */
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.btn {
+    padding: 12px 45px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #e0e0e0; /* Grey background from images */
+    color: #42515f;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #d1d1d1;
+}
+
+/* Positioning for Submit to match reference image f96934.png */
+.btn-submit {
+    margin-left: auto;
+    margin-right: 20px;
+}

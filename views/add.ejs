@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Payroll Form</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100%;
+            background-color: #f7f7f7;
+            font-family: "Roboto", sans-serif;
+        }
+
+        /* Header / Logo Section */
+        .header {
+            padding: 15px 0 15px 120px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-content {
+            display: flex;
+            align-items: center;
+            width: 150px;
+        }
+
+        .logo-content img {
+            border: solid 1px white;
+            width: 40px;
+        }
+
+        .logo-text {
+            margin-left: 10px;
+        }
+
+        .emp-text {
+            color: #82a70c;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .payroll-text {
+            color: #42515f;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        /* Form Container */
+        .form-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+        }
+
+        .form-container {
+            width: 800px;
+            background: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 40px 60px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #42515f;
+            margin-bottom: 30px;
+        }
+
+        /* Alignment for Label and Input */
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        label {
+            min-width: 140px;
+            font-size: 16px;
+            color: #42515f;
+        }
+
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            color: #42515f;
+        }
+
+        /* Profile, Gender, Department specific styling */
+        .input-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .input-content label {
+            min-width: unset;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .profile-radio-group img {
+            width: 40px;
+            border-radius: 50%;
+        }
+
+        .date-selectors {
+            display: flex;
+            gap: 15px;
+        }
+
+        .date-selectors select {
+            width: 120px;
+        }
+
+        /* Button Row */
+        .btn-row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .btn-cancel, .btn-submit, .btn-reset {
+            padding: 10px 40px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            background-color: #e2e2e2;
+            color: #42515f;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover, .btn-cancel:hover, .btn-reset:hover {
+            background-color: #d1d1d1;
+        }
+
+        .submit-reset-group {
+            display: flex;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-content">
+            <img src="logo.png" alt="logo"> <div class="logo-text">
+                <span class="emp-text">EMPLOYEE</span><br>
+                <span class="payroll-text">PAYROLL</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="form-content">
+        <div class="form-container">
+            <h2>Employee Payroll Form</h2>
+            <form action="/add" method="POST">
+                
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" name="name" placeholder=" " required>
+                </div>
+
+                <div class="form-group">
+                    <label>Profile image</label>
+                    <div class="input-content profile-radio-group">
+                        <label><input type="radio" name="profilePic" value="img1" required> <img src="image1.jpg" alt=""></label>
+                        <label><input type="radio" name="profilePic" value="img2"> <img src="I2.jpg" alt=""></label>
+                        <label><input type="radio" name="profilePic" value="img3"> <img src="I3.jpg" alt=""></label>
+                        <label><input type="radio" name="profilePic" value="img4"> <img src="I4.jpg" alt=""></label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="input-content">
+                        <label><input type="radio" name="gender" value="Male"> Male</label>
+                        <label><input type="radio" name="gender" value="Female"> Female</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Department</label>
+                    <div class="input-content">
+                        <label><input type="checkbox" name="department" value="HR"> HR</label>
+                        <label><input type="checkbox" name="department" value="Sales"> Sales</label>
+                        <label><input type="checkbox" name="department" value="Finance"> Finance</label>
+                        <label><input type="checkbox" name="department" value="Engineer"> Engineer</label>
+                        <label><input type="checkbox" name="department" value="Others"> Others</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Salary</label>
+                    <select name="salary" required>
+                        <option value="">Select Salary</option>
+                        <option value="30000">30000</option>
+                        <option value="40000">40000</option>
+                        <option value="50000">50000</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Start Date</label>
+                    <div class="date-selectors">
+                        <select name="day" required>
+                            <option value="">Day</option>
+                            <% for(let i=1; i<=31; i++) { %>
+                                <option value="<%= i %>"><%= i %></option>
+                            <% } %>
+                        </select>
+                        <select name="month" required>
+                            <option value="">Month</option>
+                            <option value="1">Jan</option>
+                            <option value="2">Feb</option>
+                            <option value="3">Mar</option>
+                            </select>
+                        <select name="year" required>
+                            <option value="">Year</option>
+                            <% for(let i=2026; i>=2020; i--) { %>
+                                <option value="<%= i %>"><%= i %></option>
+                            <% } %>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Notes</label>
+                    <textarea name="notes" rows="4"></textarea>
+                </div>
+
+                <div class="btn-row">
+                    <a href="/" class="btn-cancel">Cancel</a>
+                    <div class="submit-reset-group">
+                        <button type="submit" class="btn-submit">Submit</button>
+                        <button type="reset" class="btn-reset">Reset</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
